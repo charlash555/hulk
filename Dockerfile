@@ -14,6 +14,6 @@ RUN unzip travelista-master.zip
 RUN cp -rvf travelista-master/* .
 RUN rm -rf travelista-master travelista-master.zip
 
-CMD ["nginx", "-D", "FOREGROUND"]
+CMD ["nginx", "-g", "daemon off;"]
 
 EXPOSE 80 22 8080 443
